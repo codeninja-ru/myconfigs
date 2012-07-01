@@ -7,7 +7,7 @@ import qualified Data.Map        as M
 import XMonad.Hooks.ManageDocks
 
 main = do
-	xmobar <- spawn "xmobar /home/vital/.xmonad/xmobar.hs"
+--	xmobar <- spawn "xmobar /home/vital/.xmonad/xmobar.hs"
 	autostart <- spawn "/home/vital/.xmonad/autostart.sh"
 	xmonad $ defaultConfig
 	  { terminal    = "gnome-terminal"
