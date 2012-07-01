@@ -4,10 +4,10 @@
 
 # Background definitions
 # ID 1
-rounded = 7
-border_width = 2
-background_color = #000000 60
-border_color = #FFFFFF 16
+rounded = 0
+border_width = 1
+background_color = #444444 100
+border_color = #555555 100
 
 # ID 2
 rounded = 5
@@ -24,7 +24,7 @@ border_color = #FFFFFF 68
 # Panel
 panel_monitor = all
 panel_position = top center horizontal
-panel_size = 94% 30
+panel_size = 100% 30
 panel_margin = 0 0
 panel_padding = 7 0 7
 panel_dock = 0
@@ -65,7 +65,7 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = sans 7
+task_font = Ubuntu 7
 task_font_color = #FFFFFF 68
 task_active_font_color = #FFFFFF 83
 task_urgent_font_color = #FFFFFF 83
