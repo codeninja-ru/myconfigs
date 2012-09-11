@@ -6,15 +6,19 @@ import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Util.EZConfig(additionalKeys)
 
 main = do
 --	xmobar <- spawn "xmobar /home/vital/.xmonad/xmobar.hs"
-	autostart <- spawn "/home/vital/.xmonad/autostart.sh"
-	xmonad $ ewmh defaultConfig
-	  { terminal    = "gnome-terminal"
-		, manageHook = manageDocks <+> manageHook defaultConfig
-		, layoutHook = avoidStruts $ layoutHook defaultConfig
-	  }
+  autostart <- spawn "/home/vital/.xmonad/autostart.sh"
+  xmonad $ ewmh defaultConfig
+    { terminal    = "gnome-terminal"
+    , manageHook = manageDocks <+> manageHook defaultConfig
+    , layoutHook = avoidStruts $ layoutHook defaultConfig
+    } `additionalKeys`
+    [ ((0, xK_Print), spawn "scrot '/tmp/screen_%Y-%m-%d_$wx$h.png' -e feh")
+    , ((shiftMask, xK_Print), spawn "scrot -u '/tmp/screen_%Y-%m-%d_$wx$h.png' -e feh")
+    ]
 
 
 --defaults = defaultConfig {
