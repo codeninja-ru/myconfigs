@@ -16,8 +16,8 @@ main = do
     , manageHook = manageDocks <+> manageHook defaultConfig
     , layoutHook = avoidStruts $ layoutHook defaultConfig
     } `additionalKeys`
-    [ ((0, xK_Print), spawn "scrot '/tmp/screen_%Y-%m-%d_$wx$h.png' -e feh")
-    , ((shiftMask, xK_Print), spawn "scrot -u '/tmp/screen_%Y-%m-%d_$wx$h.png' -e feh")
+    [ ((0, xK_Print), spawn "scrot '/tmp/screen_%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
+    , ((shiftMask, xK_Print), spawn "scrot -s '/tmp/screen_%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
     ]
 
 

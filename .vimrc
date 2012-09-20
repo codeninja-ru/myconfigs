@@ -26,7 +26,7 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-"Bundle 'rubycomplete'
+Bundle 'rubycomplete'
 Bundle 'Solarized'
 set background=light
 let g:solarized_termtrans=0
