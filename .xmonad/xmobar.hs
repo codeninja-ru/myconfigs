@@ -1,19 +1,21 @@
+-- solarized
+-- ethanschoonover.com/solarized
+
 Config { font = "xft:Ubuntu:style=Regular:size=11:antialias=true"
-       , borderColor = "#555555"
+       , borderColor = "#eee8d5"
        , border = TopB
-       , bgColor = "#444444"
-       , fgColor = "#eeeeee"
-       , position = Top
+       , bgColor = "#eee8d5"
+       , fgColor = "#93a1a1"
+       , position = Bottom
        , lowerOnStart = True
-       , commands = [ Run Weather "UHWW" ["-t","<tempC>C","-L","18","-H","25","--normal","green","--high","red","--low","lightblue"] 36000
-                    , Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                    , Run Network "eth1" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+       , commands = [ Run Weather "UHWW" ["-t","<tempC>C","-L","18","-H","25","--normal","#859900","--high","#dc322f","--low","#268bd2"] 36000
+                    , Run Network "eth0" ["-L","0","-H","32","--normal","#859900","--high","#dc322f"] 10
+                    , Run Cpu ["-L","3","-H","50","--normal","#859900","--high","#dc322f"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
-    		    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run Date "%H:%M:%S" "date" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% | %memory% | %eth0% }{ <fc=#ee9a00>%date%</fc>| %UHWW% | %uname%"
-       }
+       , template = "%cpu% | %memory% | %eth0% }{ <fc=#b58900>%date%</fc> | %UHWW%"
+       } 

@@ -61,3 +61,12 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
+"
+
+
+if has("autocmd")
+  " Enable file tupe detection
+  filetype on
+
+  autocmd FileType haskell setlocal ts=4 sts=4 sw=4 expandtab
+endif

@@ -17,7 +17,7 @@ main = do
     , layoutHook = avoidStruts $ layoutHook defaultConfig
     } `additionalKeys`
     [ ((0, xK_Print), spawn "scrot '/tmp/screen_%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
-    , ((shiftMask, xK_Print), spawn "scrot -s '/tmp/screen_%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
+    , ((shiftMask, xK_Print), spawn "scrot -s '/tmp/screen_part%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
     ]
 
 
