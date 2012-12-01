@@ -19,6 +19,7 @@ main = do
     [ ((0, xK_Print), spawn "scrot '/tmp/screen_%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
     , ((shiftMask, xK_Print), spawn "scrot -s '/tmp/screen_part%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
     , ((mod1Mask,               xK_p     ), spawn "dmenu_run -fn '-xos4-terminus-medium-*-*-*-32-*-*-*-*-*-*-*' -nb '#333333' -nf '#cccccc' -sb '#cccccc' -sf '#333333'")
+    , ((mod1Mask,               xK_t     ), spawn "date +'%A,%_d %B %H:%M' | dzen2 -fn '-xos4-terminus-medium-*-*-*-32-*-*-*-*-*-*-*' -bg '#444444' -fg '#cccccc' -w 550 -h 80 -x 700 -y 915 -p 5")
     ]
 
 
