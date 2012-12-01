@@ -69,4 +69,5 @@ if has("autocmd")
   filetype on
 
   autocmd FileType haskell setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType java setlocal ts=4 sts=4 sw=4 expandtab
 endif
