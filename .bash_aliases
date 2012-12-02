@@ -1,0 +1,1 @@
+alias poweroff="sudo poweroff"
