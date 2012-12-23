@@ -7,6 +7,7 @@ import qualified Data.Map        as M
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Hooks.SetWMName
 
 main = do
 --	xmobar <- spawn "xmobar /home/vital/.xmonad/xmobar.hs"
@@ -15,6 +16,7 @@ main = do
     { terminal    = "gnome-terminal"
     , manageHook = manageDocks <+> manageHook defaultConfig
     , layoutHook = avoidStruts $ layoutHook defaultConfig
+    , startupHook = setWMName "LG3d" -- for Intellij IDEA
     } `additionalKeys`
     [ ((0, xK_Print), spawn "scrot '/tmp/screen_%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
     , ((shiftMask, xK_Print), spawn "scrot -s '/tmp/screen_part%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
