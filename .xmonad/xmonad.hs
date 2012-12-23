@@ -9,14 +9,10 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Hooks.SetWMName
 
-main = do
---	xmobar <- spawn "xmobar /home/vital/.xmonad/xmobar.hs"
-  autostart <- spawn "/home/vital/.xmonad/autostart.sh"
-  xmonad $ ewmh defaultConfig
+conf = ewmh defaultConfig
     { terminal    = "gnome-terminal"
     , manageHook = manageDocks <+> manageHook defaultConfig
     , layoutHook = avoidStruts $ layoutHook defaultConfig
-    , startupHook = setWMName "LG3d" -- for Intellij IDEA
     } `additionalKeys`
     [ ((0, xK_Print), spawn "scrot '/tmp/screen_%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
     , ((shiftMask, xK_Print), spawn "scrot -s '/tmp/screen_part%Y-%m-%d-%H%M_$wx$h.png' -e 'feh $f'")
@@ -24,6 +20,12 @@ main = do
     , ((mod1Mask,               xK_t     ), spawn "date +'%A,%_d %B %H:%M' | dzen2 -fn '-xos4-terminus-medium-*-*-*-32-*-*-*-*-*-*-*' -bg '#444444' -fg '#cccccc' -w 550 -h 80 -x 700 -y 915 -p 5")
     ]
 
+main = do
+--	xmobar <- spawn "xmobar /home/vital/.xmonad/xmobar.hs"
+  autostart <- spawn "/home/vital/.xmonad/autostart.sh"
+  xmonad conf
+    { startupHook = startupHook conf >> setWMName "LG3D"
+    }
 
 --defaults = defaultConfig {
 --      -- simple stuff
