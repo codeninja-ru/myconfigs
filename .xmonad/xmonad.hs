@@ -8,6 +8,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Hooks.SetWMName
+import XMonad.Hooks.ICCCMFocus
 
 conf = ewmh defaultConfig
     { terminal    = "gnome-terminal"
@@ -25,6 +26,7 @@ main = do
   autostart <- spawn "/home/vital/.xmonad/autostart.sh"
   xmonad conf
     { startupHook = startupHook conf >> setWMName "LG3D"
+    , logHook = takeTopFocus
     }
 
 --defaults = defaultConfig {
