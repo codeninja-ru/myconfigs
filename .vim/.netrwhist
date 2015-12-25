@@ -1,7 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/etc/php5/apache2'
-let g:netrw_dirhist_2='/usr/share/vim/vimfiles'
-let g:netrw_dirhist_3='/etc/logrotate.d'
-let g:netrw_dirhist_4='/mnt/f/linux/apps'
-let g:netrw_dirhist_5='/home/vital/.xmonad'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/vital/job/nxsystems/reps/pegasus-ui-clients/conf'
+let g:netrw_dirhist_2='/Users/vital/job/nxsystems/reps/pegasus-ui-clients/conf/webserver'
+let g:netrw_dirhist_3='/Users/vital/job/nxsystems/reps/temp/pegasus-ui-clients/iframe/sgpg/example'
+let g:netrw_dirhist_4='/private/tmp/example'

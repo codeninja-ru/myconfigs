@@ -19,21 +19,24 @@ set cin
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"init pathogen
+execute pathogen#infect()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-Bundle 'rubycomplete'
-Bundle 'Solarized'
-set background=light
-let g:solarized_termtrans=0
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme solarized
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+"
+"" let Vundle manage Vundle
+"" required! 
+"Bundle 'gmarik/vundle'
+"
+"Bundle 'rubycomplete'
+"Bundle 'Solarized'
+"set background=light
+"let g:solarized_termtrans=0
+"let g:solarized_termcolors=256
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+"colorscheme solarized
 
 
 "
@@ -63,6 +66,8 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle command are not allowed..
 "
 
+syntax on
+
 
 if has("autocmd")
   " Enable file tupe detection
@@ -70,4 +75,5 @@ if has("autocmd")
 
   autocmd FileType haskell setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType java setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
 endif
