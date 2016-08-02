@@ -19,6 +19,9 @@ set cin
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+setlocal foldmethod=indent
+setlocal foldignore=
+
 " turn on pathogen
 execute pathogen#infect()
 " to generate help
