@@ -19,9 +19,6 @@ set cin
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-setlocal foldmethod=indent
-setlocal foldignore=
-
 " turn on pathogen
 execute pathogen#infect()
 " to generate help
@@ -50,9 +47,9 @@ if has("autocmd")
 
   autocmd FileType haskell setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType java setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab foldmethod=syntax number
   autocmd FileType typescript setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab number
 endif
 
 set omnifunc=syntaxcomplete#Complete
