@@ -1,0 +1,9 @@
+# key: get
+# name: get
+# --
+$resp = $this->client->get('message/list', [
+    'cookies' => ${1:$$(yas-choose-value '("loginAsExpert" "loginAsUser" "loginAsExpert2"))}($this->client),
+    'query' => [
+            $2
+    ]
+]);

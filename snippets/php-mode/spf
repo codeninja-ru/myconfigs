@@ -1,0 +1,8 @@
+# key: spf
+# name: spf
+# --
+public static function ${1:Name}() {
+    return function($2) {
+        $3
+    };
+}

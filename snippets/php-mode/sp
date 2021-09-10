@@ -1,0 +1,6 @@
+# key: sp
+# name: sp
+# --
+public static function ${1:name}(${2:$vars}) {
+       $3
+}

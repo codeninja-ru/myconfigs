@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: 403
+# key: 403
+# --
+
+expect($resp->getStatusCode())->toBe(403);
+expect($resp->getBody()->getContents())->toBe('{"errors":["access denied"],"type":"error"}');

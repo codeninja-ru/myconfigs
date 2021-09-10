@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: form
+# key: form
+# --
+<?php
+use Valitron\Validator;
+
+class ${1:Name}Form extends AbstractValidatedForm {
+    //public $firstName;
+
+    public function __construct() {
+        $this->v = new Validator($this);
+        //$this->v->rule('required', ['firstName', 'lastName', 'dob', 'sex', 'city']);
+    }
+    
+
+    public static function castFrom() {
+        return ${2:$$(yas-choose-value '("$_POST" "$_GET"))};
+    }
+}

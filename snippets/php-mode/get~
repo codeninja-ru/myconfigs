@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: get
+# key: get
+# --
+$resp = $this->client->get('message/list', [
+    'cookies' => loginAsExpert($this->client),
+    'query' => [
+            $0
+    ]
+]);

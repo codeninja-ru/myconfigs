@@ -1,0 +1,4 @@
+# key: vd
+# name: var_dump
+# --
+var_dump(${1:$var});

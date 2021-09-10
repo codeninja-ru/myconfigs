@@ -1,0 +1,10 @@
+# key: Input
+# name: Input
+# --
+<Input type="${2:text}"
+        label="$3"
+        name="$4"
+        errors={this.state.$4.errors}
+        dirty={this.state.dirty || this.state.$4.dirty}
+        value={this.state.$4.value}
+        handleInputChange={ this.handleInputChange }/>

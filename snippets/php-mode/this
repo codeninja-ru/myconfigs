@@ -1,0 +1,4 @@
+# key: this
+# name: this
+# --
+$this->${1:var} = $$1;

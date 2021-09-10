@@ -1,0 +1,7 @@
+# key: ctos
+# name: ctos
+# --
+public function __construct($1) {
+    parent::__construct();
+    $2
+}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: it
+# key: it
+# --
+it("${1:expects something}", function() {
+            ${2:expect($this->something)->toBe("something");}
+});

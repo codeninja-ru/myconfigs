@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: reducer
+# key: reducer
+# --
+export function $1Reducer(state = ${2:false}, action) {
+       switch(action.type) {
+       $0
+       default:
+        return state;
+       }
+}

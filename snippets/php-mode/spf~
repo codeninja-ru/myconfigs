@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: spf
+# key: spf
+# --
+public static function ${1:Name$(capitalize yas-text)}() {
+    return function($2) {
+        $3
+    };
+}

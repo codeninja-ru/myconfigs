@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: sp
+# key: sp
+# --
+public static function(${1:$vars}) {
+       $2
+}

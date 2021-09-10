@@ -1,0 +1,7 @@
+# key: ctor
+# name: ctor
+# --
+public function __construct($1) {
+    //parent::__construct();
+    $2
+}

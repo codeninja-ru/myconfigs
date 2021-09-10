@@ -1,0 +1,10 @@
+# key: class
+# name: class
+# --
+class $1 {
+      public function __construct() {
+             // implement
+      }
+
+      $2
+}

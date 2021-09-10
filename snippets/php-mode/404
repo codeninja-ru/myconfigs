@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: 404
+# key: 404
+# --
+expect($resp->getStatusCode())->toBe(404);
+expect($resp->getBody()->getContents())->toBe('{"errors":["not found"],"type":"error"}');

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ctor
+# key: ctor
+# --
+constructor($1) {
+              super($1);
+              $2
+}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: 400
+# key: 400
+# --
+
+expect($resp->getStatusCode())->toBe(400);
+expect($resp->getBody()->getContents())->toMatch('/^{"errors":.*?,"type":"validation"}/');

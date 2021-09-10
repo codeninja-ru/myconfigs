@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: 200
+# key: 200
+# --
+expect($resp->getStatusCode())->toBe(200);
+expect($resp->getBody()->getContents())->toBe('${0:todo}');

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: handle
+# key: handle
+# --
+handle${1:Click}(e) {
+                    $0
+                    e.preventDefault();
+}

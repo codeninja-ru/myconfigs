@@ -1,0 +1,57 @@
+# key: form
+# name: form
+# --
+import _ from 'lodash';
+import React from 'react';
+import {AbstractForm, validation, field, Input, Errors, SuccessMessage} from 'form';
+import { login } from 'redux/actions';
+import { connect } from 'react-redux';
+
+class ${1:ComponentName}FormComp extends AbstractForm {
+    constructor(props) {
+        super(props);
+
+        this.state = _.merge({
+            //todo declare your fields here, example: email: field(),
+        }, this.state);
+
+        this.validate = _.merge({
+            //todo declare your validators, example: email: [validation.required(), validation.email()],
+        }, this.validate);
+    }
+
+    onSubmit(e) {
+        //todo request to the api
+        //return profileApi
+        //    .changeEmail(new FormData(e.target))
+        //    .then((resp) => {
+        //        this.props.onLogin(resp.user);
+        //        this.setState({
+        //            successMessage: 'Успешно'
+        //        });
+        //    })
+        //    .catch((err) => {
+        //        this.setState({
+        //            formErrors: err.errors || ['Неудалось выполнить операцию'],
+        //        });
+        //    });
+    }
+
+    render() {
+        return (
+            <form name="${1:$(my/downcase-first-char yas-text)}Form" className="form" onSubmit={ this.handleSubmit }>
+              <SuccessMessage message={ this.state.successMessage }/>
+              <Errors errors={this.state.formErrors}/>
+              <div className="form__actions">
+                <button className="button button--primary button--lg" type="submit" disabled={ this.state.isInProgress }>Сохранить</button>
+              </div>
+            </form>
+        );
+    }
+}
+
+export const $1Form = connect(null, (dispatch) => {
+    return {
+        //todo
+    };
+})($1FormComp);

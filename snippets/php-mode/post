@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: post
+# key: post
+# --
+$resp = $this->client->post('$1', [
+    'cookies' => loginAsUser($this->client),
+    'form_params' => [
+                  $2
+    ]
+]);
